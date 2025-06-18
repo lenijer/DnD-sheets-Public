@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html lang = "en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<link rel="stylesheet" type="text/css" href="Sheet.css" />
+	<script src="Sheet.js" type="text/javascript" defer></script>
+	
+	<title>[Character Name]</title>
+</head>
+<body id = "bdy">
+	<script>	
+		document.addEventListener("DOMContentLoaded", function() { 
+			StartPlacement();
+			for (let i = 0; i < Page.length; i++){
+				print(Page[i].Parent, Page[i].HTML);
+			}
+		});
+		
+		function print(prnt, printable){
+			//document.body.innerHTML += printable;
+			document.getElementById(prnt).innerHTML += printable;
+		}
+	</script>
+</body>
