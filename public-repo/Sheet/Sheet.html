@@ -6,9 +6,8 @@
 	
 	<link rel="stylesheet" type="text/css" href="Sheet.css" />
 	<script src="Sheet.js" type="text/javascript" defer></script>
-	<script src="../AutoFill/Autofill.js" type="text/javascript" defer></script>
 	
-	<title id = "pge">[Character Name]</title>
+	<title>[Character Name]</title>
 </head>
 <body id = "bdy">
 	<script>	
@@ -17,7 +16,6 @@
 			for (let i = 0; i < Page.length; i++){
 				print(Page[i].Parent, Page[i].HTML);
 			}
-			fillInfo(document);
 		});
 		
 		function print(prnt, printable){

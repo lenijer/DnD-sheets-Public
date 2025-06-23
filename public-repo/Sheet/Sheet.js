@@ -21,13 +21,13 @@ function StartPlacement(){
 	//Initiative
 	New_Item(Screen_Width, "Init", "Initiative", "[Intitiative]", "absolute_pos standard_size", 10, 30, 70, "bdy", true);
 	//Speed
-	New_Item(Screen_Width, "Speed", "Speed", "", "absolute_pos standard_size", 10, 40, 70, "bdy", true);
+	New_Item(Screen_Width, "Speed", "Speed", "[Speed]", "absolute_pos standard_size", 10, 40, 70, "bdy", true);
 	//Proficency Bonus
-	New_Item(Screen_Width, "Prof", "Proficency Bonus", "", "absolute_pos standard_size", 10, 10, 70, "bdy", true);
+	New_Item(Screen_Width, "Prof", "Proficency Bonus", "[Prof]", "absolute_pos standard_size", 10, 10, 70, "bdy", true);
 	//Inspiration
-	New_Item(Screen_Width, "Insp", "Inspiration", "...", "absolute_pos standard_size", 10, 10, 70 * 2, "bdy", true);
+	New_Item(Screen_Width, "Ins", "Inspiration", "...", "absolute_pos standard_size", 10, 10, 70 * 2, "bdy", true);
 	//Passive Perception
-	New_Item(Screen_Width, "PP", "Passive Perception", "", "absolute_pos standard_size", 10, 0, 70 * 13, "bdy", true);
+	New_Item(Screen_Width, "PP", "Passive Perception", "[+Perception + 10]", "absolute_pos standard_size", 10, 0, 70 * 13, "bdy", true);
 	//Equipment
 	New_Item(Screen_Width, "Equ", "Equipment", "...", "absolute_pos standard_NoHeight", 10, 50, 70, "bdy", true);
 	//Other Proficencies
@@ -51,11 +51,11 @@ function StartPlacement(){
 	//Hit Points
 	New_Item(Screen_Width, "HP", "Hit Points", "[CURRENT]/[MAX] [TMP]", "absolute_pos standard_size", 30, 20, 70 * 2, "bdy", true);
 	//Hit Dice
-	New_Item(Screen_Width, "HD", "Hit Dice", "", "absolute_pos standard_size", 10, 20, 70 * 3, "bdy", true);
+	New_Item(Screen_Width, "HD", "Hit Dice", "[CURRENT]/[MAX] [Dice Type]", "absolute_pos standard_size", 10, 20, 70 * 3, "bdy", true);
 	
 	//Death Saves
 	let DS = New_Item(Screen_Width, "DS", "Death Saves", "", "absolute_pos standard_size flex_row", 20, 30, 70 * 3, "bdy", true);
-	
+		
 	New_Item(DS.Width, "Suc", "Success", "...", "", 50, 0, 0, DS.Id, true);
 	New_Item(DS.Width, "Fail", "Fails", "...", "", 50, 50, 0, DS.Id, true);
 	
@@ -65,12 +65,12 @@ function StartPlacement(){
 	Page.pop();
 	fieldset(ST);
 	
-	New_Item(ST.Width, "Str_S", "Strength", "", "standard_NoHeight", 100, 0, 0, ST.Id, true);
-	New_Item(ST.Width, "Dex_S", "Dexterity", "", "standard_NoHeight", 100, 0, 0, ST.Id, true);
-	New_Item(ST.Width, "Con_S", "Constitution", "", "standard_NoHeight", 100, 0, 0, ST.Id, true);
-	New_Item(ST.Width, "Int_S", "Intelligence", "", "standard_NoHeight", 100, 0, 0, ST.Id, true);
-	New_Item(ST.Width, "Wis_S", "Wisdom", "", "standard_NoHeight", 100, 0, 0, ST.Id, true);
-	New_Item(ST.Width, "Chr_S", "Charisma", "", "standard_NoHeight", 100, 0, 0, ST.Id, true);
+	New_Item(ST.Width, "Str_S", "Strength", "[+Str + Prof?]", "standard_NoHeight", 100, 0, 0, ST.Id, true);
+	New_Item(ST.Width, "Dex_S", "Dexterity", "[+Dex + Prof?]", "standard_NoHeight", 100, 0, 0, ST.Id, true);
+	New_Item(ST.Width, "Con_S", "Constitution", "[+Con + Prof?]", "standard_NoHeight", 100, 0, 0, ST.Id, true);
+	New_Item(ST.Width, "Int_S", "Intelligence", "[+Int + Prof?]", "standard_NoHeight", 100, 0, 0, ST.Id, true);
+	New_Item(ST.Width, "Wis_S", "Wisdom", "[+Wis + Prof?]", "standard_NoHeight", 100, 0, 0, ST.Id, true);
+	New_Item(ST.Width, "Chr_S", "Charisma", "[+Chr + Prof?]", "standard_NoHeight", 100, 0, 0, ST.Id, true);
 	
 	//Top Row
 	let TopRow = New_Item(Screen_Width, "TopRow", "", "", "absolute_pos flex_row", 100, 0, 0, "bdy",false);
@@ -78,12 +78,12 @@ function StartPlacement(){
 	Page.pop();
 	divs(TopRow);
 	
-	New_Item(TopRow.Width, "PlNam", "Player Name", "", "", 15, 0, 0, TopRow.Id, true);
-	New_Item(TopRow.Width, "CharNam", "Character Name", "", "", 15, 0, 0, TopRow.Id, true);
-	New_Item(TopRow.Width, "Race", "Race", "", "", 15, 0, 0, TopRow.Id, true);
-	New_Item(TopRow.Width, "Klass", "Class", "", "", 15, 0, 0, TopRow.Id, true);
-	New_Item(TopRow.Width, "Alig", "Aligment", "", "", 15, 0, 0, TopRow.Id, true);
-	New_Item(TopRow.Width, "Backg", "Background", "", "", 15, 0, 0, TopRow.Id, true);
+	New_Item(TopRow.Width, "PlNam", "Player Name", "[Player Name]", "", 15, 0, 0, TopRow.Id, true);
+	New_Item(TopRow.Width, "CharNam", "Character Name", "[Character Name]", "", 15, 0, 0, TopRow.Id, true);
+	New_Item(TopRow.Width, "Race", "Race", "[Race]", "", 15, 0, 0, TopRow.Id, true);
+	New_Item(TopRow.Width, "Klass", "Class", "[Class] [level] [Archetype]", "", 15, 0, 0, TopRow.Id, true);
+	New_Item(TopRow.Width, "Alig", "Aligment", "[Aligment]", "", 15, 0, 0, TopRow.Id, true);
+	New_Item(TopRow.Width, "Backg", "Background", "[Background]", "", 15, 0, 0, TopRow.Id, true);
 	
 	//Stats
 	let Attri = New_Item(Screen_Width, "Attri", "", "", "absolute_pos flex_column", 10, 0, 70, "bdy", false);
@@ -91,27 +91,27 @@ function StartPlacement(){
 	Page.pop();
 	divs(Attri);
 	
-	let Str = New_Item(Attri.Width, "Str", "Strength", "", "", 100, 0, 0, Attri.Id, true);
+	let Str = New_Item(Attri.Width, "Str", "Strength", "[+Str]<br>[Str]", "", 100, 0, 0, Attri.Id, true);
 	Str.Style += " height: " + (140 - 16) + "px;";
 	Page.pop();
 	fieldset(Str);
-	let Dex = New_Item(Attri.Width, "Dex", "Dexterity", "", "", 100, 0, 0, Attri.Id, true);
+	let Dex = New_Item(Attri.Width, "Dex", "Dexterity", "[+Dex]<br>[Dex]", "", 100, 0, 0, Attri.Id, true);
 	Dex.Style += " height: " + (140 - 16) + "px;";
 	Page.pop();
 	fieldset(Dex);
-	let Con = New_Item(Attri.Width, "Con", "Constitution", "", "", 100, 0, 0, Attri.Id, true);
+	let Con = New_Item(Attri.Width, "Con", "Constitution", "[+Con]<br>[Con]", "", 100, 0, 0, Attri.Id, true);
 	Con.Style += " height: " + (140 - 16) + "px;";
 	Page.pop();
 	fieldset(Con);
-	let Int = New_Item(Attri.Width, "Int", "Intelligence", "", "", 100, 0, 0, Attri.Id, true);
+	let Int = New_Item(Attri.Width, "Int", "Intelligence", "[+Int]<br>[Int]", "", 100, 0, 0, Attri.Id, true);
 	Int.Style += " height: " + (140 - 16) + "px;";
 	Page.pop();
 	fieldset(Int);
-	let Wis = New_Item(Attri.Width, "Wis", "Wisdom", "", "", 100, 0, 0, Attri.Id, true);
+	let Wis = New_Item(Attri.Width, "Wis", "Wisdom", "[+Wis]<br>[Wis]", "", 100, 0, 0, Attri.Id, true);
 	Wis.Style += " height: " + (140 - 16) + "px;";
 	Page.pop();
 	fieldset(Wis);
-	let Chr = New_Item(Attri.Width, "Chr", "Charisma", "", "", 100, 0, 0, Attri.Id, true);
+	let Chr = New_Item(Attri.Width, "Chr", "Charisma", "[+Chr]<br>[Chr]", "", 100, 0, 0, Attri.Id, true);
 	Chr.Style += " height: " + (140 - 16) + "px;";
 	Page.pop();
 	fieldset(Chr);
@@ -122,23 +122,23 @@ function StartPlacement(){
 	Page.pop();
 	divs(OtherRoll);
 	
-	New_Item(OtherRoll.Width, "Acro", "Acrobatics", "", "standard_size", 100, 0, 0, OtherRoll.Id, true);
-	New_Item(OtherRoll.Width, "AH", "Animal Handeling", "", "standard_size", 100, 0, 0, OtherRoll.Id, true);
-	New_Item(OtherRoll.Width, "Arc", "Arcana", "", "standard_size", 100, 0, 0, OtherRoll.Id, true);
-	New_Item(OtherRoll.Width, "Dec", "Deception", "", "standard_size", 100, 0, 0, OtherRoll.Id, true);
-	New_Item(OtherRoll.Width, "His", "History", "", "standard_size", 100, 0, 0, OtherRoll.Id, true);
-	New_Item(OtherRoll.Width, "Ins", "Insight", "", "standard_size", 100, 0, 0, OtherRoll.Id, true);
-	New_Item(OtherRoll.Width, "Itm", "Intimidation", "", "standard_size", 100, 0, 0, OtherRoll.Id, true);	
-	New_Item(OtherRoll.Width, "Inv", "Investigation", "", "standard_size", 100, 0, 0, OtherRoll.Id, true);
-	New_Item(OtherRoll.Width, "Med", "Medicine", "", "standard_size", 100, 0, 0, OtherRoll.Id, true);
-	New_Item(OtherRoll.Width, "Nat", "Nature", "", "standard_size", 100, 0, 0, OtherRoll.Id, true);	
-	New_Item(OtherRoll.Width, "Perc", "Perceptione", "", "standard_size", 100, 0, 0, OtherRoll.Id, true);
-	New_Item(OtherRoll.Width, "Perf", "Performance", "", "standard_size", 100, 0, 0, OtherRoll.Id, true);
-	New_Item(OtherRoll.Width, "Pers", "Persuation", "", "standard_size", 100, 0, 0, OtherRoll.Id, true);	
-	New_Item(OtherRoll.Width, "Rel", "Religion", "", "standard_size", 100, 0, 0, OtherRoll.Id, true);
-	New_Item(OtherRoll.Width, "SOH", "Slight Of Hand", "", "standard_size", 100, 0, 0, OtherRoll.Id, true);
-	New_Item(OtherRoll.Width, "Sth", "Stealth", "", "standard_size", 100, 0, 0, OtherRoll.Id, true);	
-	New_Item(OtherRoll.Width, "Sur", "Survival", "", "standard_size", 100, 0, 0, OtherRoll.Id, true);
+	New_Item(OtherRoll.Width, "Acro", "Acrobatics", "[Dex + Prof? + Exp?]", "standard_size", 100, 0, 0, OtherRoll.Id, true);
+	New_Item(OtherRoll.Width, "AH", "Animal Handeling", "[Dex + Prof? + Exp?]", "standard_size", 100, 0, 0, OtherRoll.Id, true);
+	New_Item(OtherRoll.Width, "Arc", "Arcana", "[Int + Prof? + Exp?]", "standard_size", 100, 0, 0, OtherRoll.Id, true);
+	New_Item(OtherRoll.Width, "Dec", "Deception", "[Chr + Prof? + Exp?]", "standard_size", 100, 0, 0, OtherRoll.Id, true);
+	New_Item(OtherRoll.Width, "His", "History", "[Int + Prof? + Exp?]", "standard_size", 100, 0, 0, OtherRoll.Id, true);
+	New_Item(OtherRoll.Width, "Ins", "Insight", "[Wis + Prof? + Exp?]", "standard_size", 100, 0, 0, OtherRoll.Id, true);
+	New_Item(OtherRoll.Width, "Itm", "Intimidation", "[Chr + Prof? + Exp?]", "standard_size", 100, 0, 0, OtherRoll.Id, true);	
+	New_Item(OtherRoll.Width, "Inv", "Investigation", "[Int + Prof? + Exp?]", "standard_size", 100, 0, 0, OtherRoll.Id, true);
+	New_Item(OtherRoll.Width, "Med", "Medicine", "[Wis + Prof? + Exp?]", "standard_size", 100, 0, 0, OtherRoll.Id, true);
+	New_Item(OtherRoll.Width, "Nat", "Nature", "[Int + Prof? + Exp?]", "standard_size", 100, 0, 0, OtherRoll.Id, true);	
+	New_Item(OtherRoll.Width, "Perc", "Perceptione", "[Wis + Prof? + Exp?]", "standard_size", 100, 0, 0, OtherRoll.Id, true);
+	New_Item(OtherRoll.Width, "Perf", "Performance", "[Chr + Prof? + Exp?]", "standard_size", 100, 0, 0, OtherRoll.Id, true);
+	New_Item(OtherRoll.Width, "Pers", "Persuation", "[Chr + Prof? + Exp?]", "standard_size", 100, 0, 0, OtherRoll.Id, true);	
+	New_Item(OtherRoll.Width, "Rel", "Religion", "[Int + Prof? + Exp?]", "standard_size", 100, 0, 0, OtherRoll.Id, true);
+	New_Item(OtherRoll.Width, "SOH", "Slight Of Hand", "[Dex + Prof? + Exp?]", "standard_size", 100, 0, 0, OtherRoll.Id, true);
+	New_Item(OtherRoll.Width, "Sth", "Stealth", "[Dex + Prof? + Exp?]", "standard_size", 100, 0, 0, OtherRoll.Id, true);	
+	New_Item(OtherRoll.Width, "Sur", "Survival", "[Wis + Prof? + Exp?]", "standard_size", 100, 0, 0, OtherRoll.Id, true);
 }
 
 function New_Item(w, ID, Title, Txt, Class, Width_perc, Left_perc, Top, Parent, filedset){
