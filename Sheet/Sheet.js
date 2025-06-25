@@ -93,7 +93,6 @@ function StartPlacement(){
 	divs(Attri);
 	
 	let Str = New_Item(Attri.Width, "Str", "Strength", "", "button", "D20Roll( document, Str)", 100, 0, 0, Attri.Id, true);
-	//let Str = New_Item(Attri.Width, "Str", "Strength", "", "button", "D20Roll( document, 'Str')", 100, 0, 0, Attri.Id, true);
 	Str.Style += " height: " + (140 - 16) + "px;";
 	Page.pop();
 	fieldset(Str);

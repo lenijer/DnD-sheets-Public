@@ -47,11 +47,3 @@ div{
 	
 	overflow: hidden;
 }
-
-.button{
-	opacity: 100%;
-}
-
-.button:hover{
-	opacity: 70%;
-}
