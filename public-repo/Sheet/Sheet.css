@@ -1,5 +1,5 @@
 fieldset{
-	border: 1px solid #4867AF;
+	border: 1px solid #000000;
 }
 
 div{
@@ -54,5 +54,4 @@ div{
 
 .button:hover{
 	opacity: 70%;
-	background-color: #E0E9FF;
 }
