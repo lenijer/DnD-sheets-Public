@@ -66,12 +66,12 @@ function StartPlacement(){
 	Page.pop();
 	fieldset(ST);
 	
-	New_Item(ST.Width, "Str_S", "Strength", "", "standard_NoHeight button", "D20Roll( document, Str_S)", 100, 0, 0, ST.Id, true);
-	New_Item(ST.Width, "Dex_S", "Dexterity", "", "standard_NoHeight button", "D20Roll( document, Dex_S)", 100, 0, 0, ST.Id, true);
-	New_Item(ST.Width, "Con_S", "Constitution", "", "standard_NoHeight button", "D20Roll( document, Con_S)", 100, 0, 0, ST.Id, true);
-	New_Item(ST.Width, "Int_S", "Intelligence", "", "standard_NoHeight button", "D20Roll( document, Int_S)", 100, 0, 0, ST.Id, true);
-	New_Item(ST.Width, "Wis_S", "Wisdom", "", "standard_NoHeight button", "D20Roll( document, Wis_S)", 100, 0, 0, ST.Id, true);
-	New_Item(ST.Width, "Chr_S", "Charisma", "", "standard_NoHeight button", "D20Roll( document, Chr_S)", 100, 0, 0, ST.Id, true);
+	New_Item(ST.Width, "Str_S", "Strength", "", "standard_NoHeight", "", 100, 0, 0, ST.Id, true);
+	New_Item(ST.Width, "Dex_S", "Dexterity", "", "standard_NoHeight", "", 100, 0, 0, ST.Id, true);
+	New_Item(ST.Width, "Con_S", "Constitution", "", "standard_NoHeight", "", 100, 0, 0, ST.Id, true);
+	New_Item(ST.Width, "Int_S", "Intelligence", "", "standard_NoHeight", "", 100, 0, 0, ST.Id, true);
+	New_Item(ST.Width, "Wis_S", "Wisdom", "", "standard_NoHeight", "", 100, 0, 0, ST.Id, true);
+	New_Item(ST.Width, "Chr_S", "Charisma", "", "standard_NoHeight", "", 100, 0, 0, ST.Id, true);
 	
 	//Top Row
 	let TopRow = New_Item(Screen_Width, "TopRow", "", "", "absolute_pos flex_row", "", 100, 0, 0, "bdy",false);
@@ -80,7 +80,6 @@ function StartPlacement(){
 	divs(TopRow);
 	
 	New_Item(TopRow.Width, "PlNam", "Player Name", "", "", "", 15, 0, 0, TopRow.Id, true);
-	New_Item(TopRow.Width, "CharIco", "Icon here", "Icon here", "", "", 15, 0, 0, TopRow.Id, true);
 	New_Item(TopRow.Width, "CharNam", "Character Name", "", "", "", 15, 0, 0, TopRow.Id, true);
 	New_Item(TopRow.Width, "Race", "Race", "", "", "", 15, 0, 0, TopRow.Id, true);
 	New_Item(TopRow.Width, "Klass", "Class", "", "", "", 15, 0, 0, TopRow.Id, true);
@@ -124,29 +123,29 @@ function StartPlacement(){
 	Page.pop();
 	divs(OtherRoll);
 	
-	New_Item(OtherRoll.Width, "Acro", "Acrobatics", "", "standard_size button", "D20Roll( document, Acro)", 100, 0, 0, OtherRoll.Id, true);
-	New_Item(OtherRoll.Width, "AH", "Animal Handeling", "", "standard_size button", "D20Roll( document, AH)", 100, 0, 0, OtherRoll.Id, true);
-	New_Item(OtherRoll.Width, "Arc", "Arcana", "", "standard_size button", "D20Roll( document, Arc)", 100, 0, 0, OtherRoll.Id, true);
-	New_Item(OtherRoll.Width, "Dec", "Deception", "", "standard_size button", "D20Roll( document, Dec)", 100, 0, 0, OtherRoll.Id, true);
-	New_Item(OtherRoll.Width, "His", "History", "", "standard_size button", "D20Roll( document, His)", 100, 0, 0, OtherRoll.Id, true);
-	New_Item(OtherRoll.Width, "Ins", "Insight", "", "standard_size button", "D20Roll( document, Ins)", 100, 0, 0, OtherRoll.Id, true);
-	New_Item(OtherRoll.Width, "Itm", "Intimidation", "", "standard_size button", "D20Roll( document, Itm)", 100, 0, 0, OtherRoll.Id, true);	
-	New_Item(OtherRoll.Width, "Inv", "Investigation", "", "standard_size button", "D20Roll( document, Inv)", 100, 0, 0, OtherRoll.Id, true);
-	New_Item(OtherRoll.Width, "Med", "Medicine", "", "standard_size button", "D20Roll( document, Med)", 100, 0, 0, OtherRoll.Id, true);
-	New_Item(OtherRoll.Width, "Nat", "Nature", "", "standard_size button", "D20Roll( document, Nat)", 100, 0, 0, OtherRoll.Id, true);	
-	New_Item(OtherRoll.Width, "Perc", "Perceptione", "", "standard_size button", "D20Roll( document, Perc)", 100, 0, 0, OtherRoll.Id, true);
-	New_Item(OtherRoll.Width, "Perf", "Performance", "", "standard_size button", "D20Roll( document, Perf)", 100, 0, 0, OtherRoll.Id, true);
-	New_Item(OtherRoll.Width, "Pers", "Persuation", "", "standard_size button", "D20Roll( document, Pers)", 100, 0, 0, OtherRoll.Id, true);	
-	New_Item(OtherRoll.Width, "Rel", "Religion", "", "standard_size button", "D20Roll( document, Rel)", 100, 0, 0, OtherRoll.Id, true);
-	New_Item(OtherRoll.Width, "SOH", "Slight Of Hand", "", "standard_size button", "D20Roll( document, SOH)", 100, 0, 0, OtherRoll.Id, true);
-	New_Item(OtherRoll.Width, "Sth", "Stealth", "", "standard_size button", "D20Roll( document, Sth)", 100, 0, 0, OtherRoll.Id, true);	
-	New_Item(OtherRoll.Width, "Sur", "Survival", "", "standard_size button", "D20Roll( document, Sur)", 100, 0, 0, OtherRoll.Id, true);
+	New_Item(OtherRoll.Width, "Acro", "Acrobatics", "", "standard_size", "", 100, 0, 0, OtherRoll.Id, true);
+	New_Item(OtherRoll.Width, "AH", "Animal Handeling", "", "standard_size", "", 100, 0, 0, OtherRoll.Id, true);
+	New_Item(OtherRoll.Width, "Arc", "Arcana", "", "standard_size", "", 100, 0, 0, OtherRoll.Id, true);
+	New_Item(OtherRoll.Width, "Dec", "Deception", "", "standard_size", "", 100, 0, 0, OtherRoll.Id, true);
+	New_Item(OtherRoll.Width, "His", "History", "", "standard_size", "", 100, 0, 0, OtherRoll.Id, true);
+	New_Item(OtherRoll.Width, "Ins", "Insight", "", "standard_size", "", 100, 0, 0, OtherRoll.Id, true);
+	New_Item(OtherRoll.Width, "Itm", "Intimidation", "", "standard_size", "", 100, 0, 0, OtherRoll.Id, true);	
+	New_Item(OtherRoll.Width, "Inv", "Investigation", "", "standard_size", "", 100, 0, 0, OtherRoll.Id, true);
+	New_Item(OtherRoll.Width, "Med", "Medicine", "", "standard_size", "", 100, 0, 0, OtherRoll.Id, true);
+	New_Item(OtherRoll.Width, "Nat", "Nature", "", "standard_size", "", 100, 0, 0, OtherRoll.Id, true);	
+	New_Item(OtherRoll.Width, "Perc", "Perceptione", "", "standard_size", "", 100, 0, 0, OtherRoll.Id, true);
+	New_Item(OtherRoll.Width, "Perf", "Performance", "", "standard_size", "", 100, 0, 0, OtherRoll.Id, true);
+	New_Item(OtherRoll.Width, "Pers", "Persuation", "", "standard_size", "", 100, 0, 0, OtherRoll.Id, true);	
+	New_Item(OtherRoll.Width, "Rel", "Religion", "", "standard_size", "", 100, 0, 0, OtherRoll.Id, true);
+	New_Item(OtherRoll.Width, "SOH", "Slight Of Hand", "", "standard_size", "", 100, 0, 0, OtherRoll.Id, true);
+	New_Item(OtherRoll.Width, "Sth", "Stealth", "", "standard_size", "", 100, 0, 0, OtherRoll.Id, true);	
+	New_Item(OtherRoll.Width, "Sur", "Survival", "", "standard_size", "", 100, 0, 0, OtherRoll.Id, true);
 	
 	
 	
 	
 	
-	New_Item(Screen_Width, "RollRes", "Roll", "", "absolute_pos standard_size", "", 20, 10 * 5, 70 * 8, "bdy", true);
+	New_Item(Screen_Width, "RollRes", "Roll", "", "absolute_pos standard_size", "", 10, 10 * 6, 70 * 8, "bdy", true);
 }
 
 function New_Item(w, ID, Title, Txt, Class, ClickEvent, Width_perc, Left_perc, Top, Parent, filedset){
