@@ -1,7 +1,119 @@
+function D100Roll(doc, ID){
+	let n = 0;
+	n = Math.floor(Math.random() * (100 + 1));
+	var str = "<br>[Roll: ]" + n + "]";
+	
+	let c = "black";
+	if (n == 1){
+		c = "red";
+	}
+	if (n == 20){
+		c = "green";
+	}
+	
+	let a = n;
+	n += AddAtribute(ID);
+	str += "[";
+	if (n - a > 0){
+		str += ReplaceAfter(ID.textContent, '+', '');
+	}else if (n - a < 0){
+		str += ReplaceAfter(ID.textContent, '-', '');
+	}else{
+		str += ReplaceAfter(ID.textContent, '0', '');
+	}
+	str += ": " + (n - a) + "]";
+	
+	Print(doc, n, str, c);
+}
+
 function D20Roll(doc, ID){
 	let n = 0;
 	n = Math.floor(Math.random() * (20 + 1));
 	var str = "<br>[Roll: " + n + "]";
+	
+	let c = "black";
+	if (n == 1){
+		c = "red";
+	}
+	if (n == 20){
+		c = "green";
+	}
+	
+	let a = n;
+	n += AddAtribute(ID);
+	str += "[";
+	if (n - a > 0){
+		str += ReplaceAfter(ID.textContent, '+', '');
+	}else if (n - a < 0){
+		str += ReplaceAfter(ID.textContent, '-', '');
+	}else{
+		str += ReplaceAfter(ID.textContent, '0', '');
+	}
+	str += ": " + (n - a) + "]";
+	
+	Print(doc, n, str, c);
+}
+
+function D10Roll(doc, ID){
+	let n = 0;
+	n = Math.floor(Math.random() * (10 + 1));
+	var str = "<br>[Roll: ]" + n + "]";
+	
+	let c = "black";
+	if (n == 1){
+		c = "red";
+	}
+	if (n == 20){
+		c = "green";
+	}
+	
+	let a = n;
+	n += AddAtribute(ID);
+	str += "[";
+	if (n - a > 0){
+		str += ReplaceAfter(ID.textContent, '+', '');
+	}else if (n - a < 0){
+		str += ReplaceAfter(ID.textContent, '-', '');
+	}else{
+		str += ReplaceAfter(ID.textContent, '0', '');
+	}
+	str += ": " + (n - a) + "]";
+	
+	Print(doc, n, str, c);
+}
+
+function D6Roll(doc, ID){
+	let n = 0;
+	n = Math.floor(Math.random() * (6 + 1));
+	var str = "<br>[Roll: ]" + n + "]";
+	
+	let c = "black";
+	if (n == 1){
+		c = "red";
+	}
+	if (n == 20){
+		c = "green";
+	}
+	
+	let a = n;
+	n += AddAtribute(ID);
+	str += "[";
+	if (n - a > 0){
+		str += ReplaceAfter(ID.textContent, '+', '');
+	}else if (n - a < 0){
+		str += ReplaceAfter(ID.textContent, '-', '');
+	}else{
+		str += ReplaceAfter(ID.textContent, '0', '');
+	}
+	str += ": " + (n - a) + "]";
+	
+	Print(doc, n, str, c);
+}
+
+function D4Roll(doc, ID){
+	let n = 0;
+	n = Math.floor(Math.random() * (4 + 1));
+	var str = "<br>[Roll: ]" + n + "]";
 	
 	let c = "black";
 	if (n == 1){
