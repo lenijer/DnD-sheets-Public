@@ -80,7 +80,7 @@ function StartPlacement(){
 	divs(TopRow);
 	
 	New_Item(TopRow.Width, "PlNam", "Player Name", "", "", "", 15, 0, 0, TopRow.Id, true);
-	New_Item(TopRow.Width, "CharIco", "[Icon here]", "Icon here", "", "", 15, 0, 0, TopRow.Id, true);
+	New_Item(TopRow.Width, "CharIco", "Icon here", "Icon here", "", "", 15, 0, 0, TopRow.Id, true);
 	New_Item(TopRow.Width, "CharNam", "Character Name", "", "", "", 15, 0, 0, TopRow.Id, true);
 	New_Item(TopRow.Width, "Race", "Race", "", "", "", 15, 0, 0, TopRow.Id, true);
 	New_Item(TopRow.Width, "Klass", "Class", "", "", "", 15, 0, 0, TopRow.Id, true);
